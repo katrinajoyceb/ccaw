@@ -1,0 +1,62 @@
+@import 'src/styles.scss';
+
+.contact{
+    @include sections;
+    h1{
+        @include textposition(40px, 926px);
+        letter-spacing: 20px;
+    }
+
+    .accentbox{
+        @include box(1136px,768px, 0px, 0px);
+        min-width: 360px;
+        position: absolute;
+
+    }
+    .contactinfo{
+        @include textposition(170px, 1186px);
+        position: absolute;
+      
+        .map{
+            width: 352px;
+            height: 263px;
+            background-color: black; 
+        }
+
+    }
+
+    .contactform{
+            @include textposition(152px, 320px);
+            @include fontcolor($accent); 
+            width: 550px;
+            letter-spacing: 1px;
+            position: absolute;
+          
+
+            .label{
+                font-weight: 300;
+            }
+
+            input{
+                background: transparent;
+                border: none;
+                margin-left: 150px;
+                width: 300px;
+                letter-spacing: 3px;
+            }
+
+            .contactmessage{
+                width: 813px;
+                height: 305px;
+                position: absolute;
+               
+                margin-top: 85px;
+               
+                h2{
+                    letter-spacing: 10px;
+                    line-height: 100px !important;
+                    margin-top: -10px;
+                }
+            }
+    }
+}

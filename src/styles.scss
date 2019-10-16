@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,400&display=swap');
+
+
+$dark: #0D0D0D;
+$accent: #fff;
+$primary: #C86400;
+$secondary: #591902;
+
+$containerbackground: #c6538c;
+$maincontainerbackground: #FFF;
+
+
+@mixin fontcolor($color){
+    color: $color;
+}
+
+@mixin sections(){
+    background-color: rgba(#fff, 1);
+ border: 1px solid black;
+    width: 1920px;
+    min-width: 1366px;
+    height: 768px;
+    margin: auto;
+    margin-bottom: 100px;   
+    position: relative; 
+}
+
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin box($width, $height, $top, $left){
+    background-color: $primary;
+    width: $width;
+    height: $height;
+    margin-top: $top;
+    margin-left: $left; 
+}
+
+@mixin textposition($top, $left){
+    position: absolute;
+    margin-top: $top;
+    margin-left: $left;
+    z-index: 100;
+}
+
+
+@mixin font-face($font-name, $alt-font, $font-weight, $font-size, $line-height){
+    font-family: $font-name, $alt-font;
+    font-weight: $font-weight; 
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+h1{
+    @include font-face("Roboto Slab", "serif", 300, 120px, 100px);
+}
+
+h2{
+    @include font-face("Roboto Slab", "serif", 400, 50px, 60px);
+    
+}
+
+h3{
+    @include font-face("Roboto Slab", "serif", 400, 30px, 40px);
+}
+
+h4{
+    @include font-face("Roboto Slab", "serif", 400, 20px, 30px);
+}
+
+body{
+    @include font-face("Roboto", "serif", 400, 20px, 30px);   
+}

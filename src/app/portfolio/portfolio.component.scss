@@ -1,0 +1,54 @@
+@import 'src/styles.scss';
+
+.portfolio{
+    @include sections;
+    h1{
+        @include textposition(70px, 846px);
+        position: absolute;
+        letter-spacing: 20px;
+    }
+    h2{
+        @include textposition(205px, 905px);
+        position: absolute;
+        letter-spacing: 10px;
+        color: $secondary;
+        text-transform: uppercase;
+    }
+    h3{
+        line-height: 20px;
+    }
+
+
+        .device1{
+            @include textposition(152px, 277px);
+            width: 570px;
+            height: 571px;
+           
+            position: absolute;
+            z-index: 10000;
+            background-image:url('src/images/portfolio/Onboarding - 3@3x_pixel_quite_black_portrait@3x.png');
+            background-size: 570px;
+ 
+           
+        }
+
+        .device2 {
+            @include textposition(260px, 503px);
+            width: 500px;
+            height: 501px;
+            position: absolute;
+            z-index: 10000;
+            background-image:url('src/images/portfolio/Scanned Cars – Detail View@3x_pixel_quite_black_portrait@3x.png');
+            background-size: 500px;
+        }
+    
+    .accentbox{
+        @include box(746px, 640px, 128px, 0px);
+        position: absolute;
+    }
+    .portfoliotext{
+        @include textposition(264px, 905px);
+        width: 550px;
+        letter-spacing: 2px;
+    }
+}

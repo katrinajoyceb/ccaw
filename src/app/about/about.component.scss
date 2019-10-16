@@ -1,0 +1,33 @@
+@import 'src/styles.scss';
+
+.about{
+    @include sections;
+    .aboutbox{
+        @include centerer;
+        width: 100%;
+        height: 768px;
+       
+        position: absolute;
+    }
+    h1{
+        @include textposition(108px, 419px);
+        width: 715px;
+        letter-spacing: 35px;
+    }
+    .accentbox{
+        @include box(894px, 462px, 165px, 0px);
+        min-width: 360px;
+        position: absolute;
+    
+    }
+    .abouttext{
+        @include textposition(423px, 1024px);
+        width: 550px;
+        letter-spacing: 1px;
+        position: absolute;
+        
+    }
+    h4{
+        margin-top: 40px;
+    }
+}

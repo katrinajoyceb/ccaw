@@ -1,0 +1,32 @@
+@import 'src/styles.scss';
+
+@mixin bgsizecolor($color, $width, $height){
+    background-color: $color;
+    width: $width;
+    height: $height;
+    margin: auto;    
+}
+
+.container {
+   @include bgsizecolor($accent, auto, 100%);
+   border: 1px solid black;
+}
+
+.maincontainer {
+    @include centerer;
+    position: absolute;
+    z-index: 100000;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+

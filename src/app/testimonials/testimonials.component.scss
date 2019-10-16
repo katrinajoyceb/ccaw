@@ -1,0 +1,40 @@
+@import 'src/styles.scss';
+
+
+
+.testimonials{
+    @include sections;
+    h1{
+        @include textposition(60px, 325px);
+        position: absolute;
+        letter-spacing: 20px;
+    }
+    .accentbox{
+        @include box(960px, 566px, 122px, 960px);
+        position: absolute;
+    }
+    .testimonialtext1{
+        @include textposition(223px, 336px);
+        width: 561px;
+        letter-spacing: 2px;
+        line-height: 35px;
+
+        h4{
+            @include textposition(100px, 200px);
+            text-transform: uppercase;
+        }
+    }
+
+    .testimonialtext2{
+        @include textposition(301px, 996px);
+        @include fontcolor($accent);
+        width: 561px;
+        letter-spacing: 2px;
+
+        h4{
+            @include textposition(50px, 300px);
+            text-transform: uppercase;
+        }
+    }
+    
+}
