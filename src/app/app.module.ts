@@ -26,6 +26,7 @@ import { TeamComponent } from './team/team.component';
     BackforwardComponent,
     MenuComponent,
     TeamComponent
+   
   ],
   imports: [
     BrowserModule
