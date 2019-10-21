@@ -1,8 +1,21 @@
 <div class="menu">
 
+<div class="stuff" *ngIf="condition">
+    
     <div class="logo"><h4>aprock<br />ustom<br />Applications</h4></div>
-    <div class="menu"></div>
-  
+    <div class="menu" (click) = "condition = !condition"></div>
+
 
 </div>
+  
+
+
+
+<div *ngIf="!condition" class="fullmenu">
+    <app-fullmenu></app-fullmenu>
+</div>
+
+</div>
+
+
 

@@ -4,20 +4,15 @@
     background-color: $color;
     width: $width;
     height: $height;
-    margin: auto;    
+    margin: 0 auto;    
 }
 
 .container {
-   @include bgsizecolor($accent, auto, 100%);
+   @include bgsizecolor($accent, auto, auto);
    border: 1px solid black;
 }
 
-.maincontainer {
-    @include centerer;
-    position: absolute;
-    z-index: 100000;
-    border: 1px solid black;
-}
+
 
 
 

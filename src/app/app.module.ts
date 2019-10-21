@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BackforwardComponent } from './backforward/backforward.component';
 import { MenuComponent } from './menu/menu.component';
 import { TeamComponent } from './team/team.component';
+import { FullmenuComponent } from './fullmenu/fullmenu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TeamComponent } from './team/team.component';
     ContactComponent,
     BackforwardComponent,
     MenuComponent,
-    TeamComponent
+    TeamComponent,
+    FullmenuComponent
    
   ],
   imports: [
