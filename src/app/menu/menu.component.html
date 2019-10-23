@@ -1,16 +1,15 @@
-<div class="menu">
+
+
+<div class="menu" *ngIf="!scrolling" wmAnimate="fadeIn" speed="fast">
+
+       <div class="back1" *ngIf="!condition"><button (click) = "condition = !condition">X</button></div>   
 
 <div class="stuff" *ngIf="condition">
+    <div class="logo" wmAnimate="fadeIn" speed="fast"></div>
     
-    <div class="logo"><h4>aprock<br />ustom<br />Applications</h4></div>
     <div class="menu" (click) = "condition = !condition"></div>
-
-
 </div>
   
-
-
-
 <div *ngIf="!condition" class="fullmenu">
     <app-fullmenu></app-fullmenu>
 </div>

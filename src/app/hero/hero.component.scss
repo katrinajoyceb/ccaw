@@ -1,11 +1,36 @@
 @import 'src/styles.scss';
 
+.logoname{
+
+    margin-left: 400px;
+    margin-top: 50px;
+    position: absolute;
+    z-index: 1000000000000;
+    h4{
+        font-size: 15px;
+        line-height: 1.33;
+       
+        letter-spacing: 1.5px;
+        color: $accent;
+      
+    }
+}
+
+.saying{
+    h3{
+        @include fontcolor($accent);
+        @include textposition(354px,448px);
+        width: 360px;
+        letter-spacing: 2px;
+       
+    }
+}
 
 
 .hero{
     background-color: rgba(#fff, 1);
     width: 1920px;
-    border: 1px solid black;
+    
     min-width: 1366px;
     height: 768px;
     margin: auto;
@@ -18,12 +43,8 @@
     background-position: -100px -450px;
 
 
-    h3{
-        @include fontcolor($accent);
-        @include textposition(354px,448px);
-        width: 360px;
-        letter-spacing: 2px;
-    }
+
+  
 
     .phone{
         @include textposition(83px,952px);

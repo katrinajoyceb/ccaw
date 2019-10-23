@@ -1,7 +1,9 @@
-<div class="team">
-    <div class="nat"></div>
-    <div class="ethan"></div>
-    <div class="riley"></div>
-    <div class="teresa"></div>
-    <div class="kat"></div>
+<div class="team" wmAnimate="fadeIn" speed="fast">
+    <div *ngIf="visible"  class="nat" (click)="show('nat')" ></div>
+    <div *ngIf="visible"  class="ethan" (click)="show('ethan')"></div>
+    <div *ngIf="visible"  class="riley" (click)="show('riley')"></div>
+    <div *ngIf="visible"  class="teresa" (click)="show('teresa')"></div>
+    <div *ngIf="visible"  class="kat" (click)="show('kat')"></div>
+
+    <div  (click)="hide()"  [@openClose]="isOpen ? 'open' : 'close'"[ngClass]="myClass" class="stuff"></div>
 </div>

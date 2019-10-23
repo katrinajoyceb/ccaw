@@ -1,7 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  keyframes,
+  group,
+  query,
+  sequence,
+  stagger,
+  animation,
+  useAnimation,
+  animateChild
+} from '@angular/animations';
 
 @Component({
   selector: 'app-about',
+  animations: [
+  ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
@@ -13,5 +30,8 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  
+
 
 }

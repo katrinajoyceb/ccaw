@@ -8,8 +8,24 @@
 }
 
 .container {
-   @include bgsizecolor($accent, auto, auto);
-   border: 1px solid black;
+   @include bgsizecolor($accent, 100%, 100%);
+   margin-bottom: 300px;
+}
+
+
+.section{
+    margin-top: 200px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: screen;
+    position: fixed;
+    z-index: 100000000000;
+
+
 }
 
 

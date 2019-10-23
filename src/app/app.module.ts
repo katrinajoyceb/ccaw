@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
@@ -13,6 +13,8 @@ import { BackforwardComponent } from './backforward/backforward.component';
 import { MenuComponent } from './menu/menu.component';
 import { TeamComponent } from './team/team.component';
 import { FullmenuComponent } from './fullmenu/fullmenu.component';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { AnimateComponent } from './animate/animate.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,14 @@ import { FullmenuComponent } from './fullmenu/fullmenu.component';
     BackforwardComponent,
     MenuComponent,
     TeamComponent,
-    FullmenuComponent
+    FullmenuComponent,
+    AnimateComponent
    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    ScrollDispatchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

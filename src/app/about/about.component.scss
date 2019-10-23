@@ -1,14 +1,36 @@
 @import 'src/styles.scss';
 
 
-button{
-
-  
+.back2{
     position: absolute;
     z-index: 10000;
     margin-left: 400px;
     margin-top: 400px;
     
+    button{
+        background-color: transparent;
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+
+.back1{
+    position: absolute;
+    z-index: 10000;  
+    margin-left: 1280px;
+    margin-top: 600px;
+
+
+    button{
+        background-color: transparent;
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+   
 }
 
 .about{
@@ -18,13 +40,11 @@ button{
     -webkit-transition-duration: 3s;
     transition-duration: 3s;
 
+    
+
     .stuff{
         position: absolute;
-        z-index: 100;
-        -moz-transition-duration: 3s;
-	    -o-transition-duration: 3s;
-	    -webkit-transition-duration: 3s;
-        transition-duration: 3s;
+        z-index: 1000000000;
     }
 
     button{

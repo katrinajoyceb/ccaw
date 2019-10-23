@@ -1,17 +1,17 @@
-<button  (click) = "condition = !condition"><<<</button>
+<div class="back2" *ngIf="!condition"><button  (click) = "condition = !condition"><</button></div>
+<div class="back1" *ngIf="condition"><button (click) = "condition = !condition">></button></div>
 
-<div *ngIf="condition" class="about" >
-   
-    <div class="aboutbox"><h1>about caprock</h1>
+<div *ngIf="condition" class="about"  wmAnimate="fadeInRight" speed="normal">
+    <div class="aboutbox"><h1 wmAnimate="fadeInRight" speed="normal" aos>about caprock</h1>
       <div class="accentbox"></div>
-      <div class="abouttext">{{aboutus}}
-      <h4 align="center">the team<br /><button (click) = "condition = !condition"><<<</button></h4>
-      </div>
+      <div class="abouttext" wmAnimate="fadeInLeft" speed="normal" aos>{{aboutus}}
+      <h4 align="center">the team<br /></h4>
+     
+    </div>
     </div>
 </div>
 
+<div *ngIf="!condition" class="stuff" wmAnimate="fadeInLeft" speed="fast">
 
-
-<div *ngIf="!condition" class="stuff">
 <app-team></app-team>
 </div>
