@@ -8,21 +8,109 @@
     .work{
         width: 1920px;
         height: 768px;
+        @include fadeIn();
     }
 
-    .forward{
+
+  
+    .nfsb{
         position: absolute;
         z-index: 10000;  
         margin-left: 1500px;
-        margin-top: 360px;
+        margin-top: 350px;
+        
         button{
             background-color: transparent;
-            border: 1px solid black;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            border: none;
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: "Roboto Slab";
+            opacity: 0.5;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+        button:hover{
+            font-size: 15px;
+            opacity: 1;
+            border: none;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+        button:focus {
+           
+            font-size: 15px;
+            opacity: 1;
+        }
+        
+    }
+
+    .llano{
+        position: absolute;
+        z-index: 10000;  
+        margin-left: 1500px;
+        margin-top: 400px;
+        button{
+            background-color: transparent;
+            border: none;
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: "Roboto Slab";
+            opacity: 0.5;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+        button:hover{
+            font-size: 15px;
+            opacity: 1;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            
         }
     }
+
+    .farming{
+        position: absolute;
+        z-index: 10000;  
+        margin-left: 1500px;
+        margin-top: 450px;
+        button{
+            background-color: transparent;
+            border: none;
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: "Roboto Slab";
+            opacity: 0.5;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+        button:hover{
+            font-size: 15px;
+            opacity: 1;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+    }
+
+
+
 
     .back{
         position: absolute;
@@ -42,6 +130,7 @@
         @include textposition(70px, 846px);
         position: absolute;
         letter-spacing: 20px;
+        
     }
     h2{
         @include textposition(205px, 905px);
@@ -55,6 +144,8 @@
     }
 
 
+    .nfsbdiv{
+        
         .device1{
             @include textposition(152px, 277px);
             width: 570px;
@@ -64,8 +155,7 @@
             z-index: 10000;
             background-image:url('src/images/portfolio/Onboarding - 3@3x_pixel_quite_black_portrait@3x.png');
             background-size: 570px;
- 
-           
+            @include fadeIn();
         }
 
         .device2 {
@@ -76,7 +166,42 @@
             z-index: 10000;
             background-image:url('src/images/portfolio/Scanned Cars – Detail View@3x_pixel_quite_black_portrait@3x.png');
             background-size: 500px;
+            @include fadeIn();
         }
+    }
+
+    .llanodiv{
+        .device1{
+            @include textposition(152px, 277px);
+            width: 570px;
+            height: 571px;
+           background-image:url('src/images/portfolio/Scanned Cars – Detail View@3x_pixel_quite_black_portrait@3x.png');
+            position: absolute;
+            z-index: 10000;
+            
+            background-size: 570px;
+            @include fadeIn();
+ 
+           
+        }
+
+        .device2 {
+            @include textposition(260px, 503px);
+            width: 500px;
+            height: 501px;
+            position: absolute;
+            z-index: 10000;
+            background-image:url('src/images/portfolio/Onboarding - 3@3x_pixel_quite_black_portrait@3x.png');
+            background-size: 500px;
+            @include fadeIn();
+        }
+    }
+
+       
+
+       
+
+
     
     .accentbox{
         @include box(746px, 640px, 128px, 0px);
@@ -86,5 +211,12 @@
         @include textposition(264px, 905px);
         width: 550px;
         letter-spacing: 2px;
+       
+    }
+
+    .stuff{
+        background-color: black;
+        @include fadeIn();
+   
     }
 }

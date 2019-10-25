@@ -7,6 +7,22 @@
         letter-spacing: 20px;
     }
 
+    .contactmessage{
+        width: 813px;
+        height: 305px;
+        position: absolute;
+        @include textposition(300px, 320px);
+        @include fontcolor($accent); 
+       
+        
+       
+        h2{
+            letter-spacing: 10px;
+            line-height: 90px !important;
+            margin-top: -10px;
+        }
+    }
+
     .accentbox{
         @include box(1136px,768px, 0px, 0px);
         min-width: 360px;
@@ -17,12 +33,15 @@
         @include textposition(170px, 1186px);
         position: absolute;
       
-        .map{
-            width: 352px;
-            height: 263px;
-            background-color: black; 
-        }
+       
+    }
 
+    .map{
+        width: 352px;
+        height: 263px;
+        background-color: black; 
+        position: absolute;
+        @include textposition(450px, 1186px);
     }
 
     .contactform{
@@ -43,20 +62,9 @@
                 margin-left: 150px;
                 width: 300px;
                 letter-spacing: 3px;
+                @include fontcolor($accent); 
             }
 
-            .contactmessage{
-                width: 813px;
-                height: 305px;
-                position: absolute;
-               
-                margin-top: 85px;
-               
-                h2{
-                    letter-spacing: 10px;
-                    line-height: 100px !important;
-                    margin-top: -10px;
-                }
-            }
+            
     }
 }

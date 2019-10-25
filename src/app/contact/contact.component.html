@@ -1,5 +1,5 @@
 <div class="contact"><h1 wmAnimate="fadeInLeft" speed="normal" aos>contact</h1>
-      <div class="contactinfo">
+      <div class="contactinfo" [@translateForm]="isMapOpen ? 'small' : 'large'" >
         <h4><p>(512) 842-7569</p>
         <p>info@caprockapps.com</p>
         <p>5280 34th ST <br />
@@ -7,16 +7,19 @@
         Hours: Monday-Friday 8-5</p>
         <p>(Click map to expand)</p></h4>
 
-        <div class="map"></div>
+       
     </div>
-    <div class="accentbox" wmAnimate="fadeInRight" speed="normal" aos>
+    <div class="map" (click)="openMap()" [@openClose]="isMapOpen ? 'open' : 'close'"></div>
+    <div class="accentbox" (click)="closeMap()" [@smallLarge]="isMapOpen ? 'small' : 'large'" wmAnimate="fadeInRight" speed="normal" aos>
         <div class="contactform">
             <b class="label">EMAIL</b> <input type="text" class="holder" placeholder="youremail@example.com"/>
             <b class="label">NAME</b> <input type="text" class="holder" placeholder="your name"/>
-            <div class="contactmessage"><h2>I have a project that I would like to talk to y'all about.</h2></div>
+           
              <div class="contactbutton"><button class="stuff">SUBMIT</button></div>
          </div>
     </div>
+
+    <div class="contactmessage" (click)="closeMap()" [@contactForm]="isMapOpen ? 'small' : 'large'" ><h2>I have a project that I would like to talk to y'all about.</h2></div>
 
   
   
