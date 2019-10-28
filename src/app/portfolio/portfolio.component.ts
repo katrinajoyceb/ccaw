@@ -21,27 +21,27 @@ import {
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
   animations: [
-    trigger('showHide', [
+    trigger('lastClicked', [
       // ...
-      state('show', style({
-        height: '500px',
+      state('clicked', style({
         opacity: 1,
-        backgroundColor: 'yellow',
-        transform: 'translateX(0)'
-      })),
-      state('hide', style({
-        height: '500px',
-        opacity: 1,
-        backgroundColor: 'green',
-        transform: 'translateX(100%)'
+        transform: 'scale(1.3)',
+       
       
       })),
-      transition('show => hide', [
+      state('notClicked', style({
+      
+        opacity: 0.5,
        
-        animate('1s')
+       
+      
+      })),
+      transition('clicked => notClicked', [
+       
+        animate('0.5s')
       ]),
-      transition('hide => show', [
-        animate('1s')
+      transition('notClicked => clicked', [
+        animate('0.5s')
       ]),
     ])
   ]
@@ -60,6 +60,7 @@ export class PortfolioComponent implements OnInit {
   public myClass: string = 'nfsbdiv';
 
 
+
   constructor() { 
   }
 
@@ -75,6 +76,8 @@ export class PortfolioComponent implements OnInit {
       this.llanodiv = false;
       this.farmingdiv = false;
       console.log("nfsb");
+
+     
       
     }
     else if(work === 'llano'){
@@ -84,6 +87,7 @@ export class PortfolioComponent implements OnInit {
       this.llanodiv = true;
       this.farmingdiv = false;
       console.log("llano");
+    
     }
     else if(work === 'farming'){
       this.selectedWork = this.farming;

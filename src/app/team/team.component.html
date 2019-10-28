@@ -5,5 +5,26 @@
     <div *ngIf="visible"  class="teresa" (click)="show('teresa')"></div>
     <div *ngIf="visible"  class="kat" (click)="show('kat')"></div>
 
-    <div  (click)="hide()"  [@openClose]="isOpen ? 'open' : 'close'"[ngClass]="myClass" class="stuff"></div>
+    
+    <div class="stuff">
+    
+    <div  [@openClose]="isOpen ? 'open' : 'close'"[ngClass]="myClass">
+           
+       <div class="back" (click)="hide()">
+           
+        <button><h4><</h4></button>
+        <!-- <h1>{{about.first}}</h1><h1 class="last">{{about.last}}</h1> -->
+    
+    
+     </div>
+
+     <div class="name">
+         <h1>{{about.first}}</h1><h1 class="last">{{about.last}}</h1>
+     </div>
+       <div class="about">
+        <h4>{{about.title}}</h4>  
+        {{about.about}} 
+       </div>
+    </div>
+    </div>
 </div>

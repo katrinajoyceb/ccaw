@@ -1,4 +1,6 @@
-
+<div *ngIf="!condition" class="fullmenu">
+        <app-fullmenu></app-fullmenu>
+    </div>
 
 <div class="menu" *ngIf="!scrolling" wmAnimate="fadeIn" speed="fast">
 
@@ -10,9 +12,7 @@
     <div class="menu" (click) = "condition = !condition"></div>
 </div>
   
-<div *ngIf="!condition" class="fullmenu">
-    <app-fullmenu></app-fullmenu>
-</div>
+
 
 </div>
 

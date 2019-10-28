@@ -3,10 +3,13 @@
 
 .team{
     @include sections;
+   
 
     .stuff{
       
         position: absolute;
+       width: 1366px;
+       height: 768px;
     }
 
     .nat{
@@ -63,8 +66,42 @@
         background-size: 450px;
         background-position: -25px 0px;
         position: absolute;
+    }
+    .name{
+        letter-spacing: 25px;
+        margin-left: 280px;
+        margin-top: 0px;
+        position: absolute;
+
+        .last{
+            margin-left:60px;
+            margin-top: -60px;
+        }
+    }
+
+    .back{
+        letter-spacing: 25px;
+        margin-left: -110px;
+        margin-top: 390px;
+        position: absolute;
+
+        button{
+            background-color: white;
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
         
-    
+
+    }
+
+   
+    .about{
+        margin-left: 480px;
+        margin-top: 400px;
+        position: absolute;
+        width: 500px;
     }
 
     

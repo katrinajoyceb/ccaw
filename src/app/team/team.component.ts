@@ -34,7 +34,8 @@ import {
         height: '500px',
         opacity: 1,
         backgroundColor: 'green',
-        transform: 'translateX(100%)'
+        transform: 'translateX(100%)',
+        
       
       })),
       transition('show => hide', [
@@ -63,9 +64,6 @@ import {
        opacity: 0,
        transform: 'translateX(0)',
 
-      
-      
-     
      })),
      transition('open => close', [
       
@@ -80,19 +78,57 @@ import {
  ]
 })
 export class TeamComponent implements OnInit {
+  condition: boolean = true;
   visible: boolean = true;
   name: string;
   public myClass: string;
   isOpen = false;
+
+  about: Object = null;
+
+  team: {first: string, last: string, about: string, title: string}[] = [
+    { 
+      first: "nat",
+      last: "joyner",
+      about: " Do I like standing on litter because I sit when I have spaces, my cat buddies have no litter. I live in luxury cat life lick the plastic bag.",
+      title: "About Me"
+    },
+    { 
+      first: "ethan",
+      last: "eckstein",
+      about: " Do I like standing on litter because I sit when I have spaces, my cat buddies have no litter. I live in luxury cat life lick the plastic bag.",
+      title: "About Me"
+    },
+    { 
+      first: "riley",
+      last: "barret",
+      about: " Do I like standing on litter because I sit when I have spaces, my cat buddies have no litter. I live in luxury cat life lick the plastic bag.",
+      title: "About Me"
+    },
+    { 
+      first: "teresa",
+      last: "copeland",
+      about: " Do I like standing on litter because I sit when I have spaces, my cat buddies have no litter. I live in luxury cat life lick the plastic bag.",
+      title: "About Me"
+    },
+    { 
+      first: "kat",
+      last: "bueno",
+      about: " Do I like standing on litter because I sit when I have spaces, my cat buddies have no litter. I live in luxury cat life lick the plastic bag.",
+      title: "About Me"
+    },
+  ];
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
-
   show(name: string){
     this.visible = !this.visible;
     this.name = name;
+    this.about = this.team.find(t => t.first === name);
     this.myClass = this.name;
     console.log(this.name);
     this.isOpen = !this.isOpen;
@@ -101,7 +137,7 @@ export class TeamComponent implements OnInit {
   hide(){
     this.visible = !this.visible;
     this.isOpen = !this.isOpen;
-  
+    this.about = '';
   }
   
 

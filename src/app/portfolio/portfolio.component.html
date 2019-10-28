@@ -3,15 +3,15 @@
 
   <div class="accentbox" wmAnimate="fadeInRight" speed="normal" aos></div>
  
-    <div class="nfsb"><button (click)="show('nfsb')">not for sale</button></div>
-    <div class="llano"><button (click)="show('llano')">llano waste</button></div>
-    <div class="farming"><button (click)="show('farming')">gabe neil's</button></div>
+    <div class="nfsb" [@lastClicked]="nfsbdiv ? 'clicked' : 'notClicked'"><button (click)="show('nfsb')">not for sale</button></div>
+    <div class="llano" [@lastClicked]="llanodiv ? 'clicked' : 'notClicked'"><button (click)="show('llano')">llano waste</button></div>
+    <div class="farming" [@lastClicked]="farmingdiv ? 'clicked' : 'notClicked'"><button (click)="show('farming')">gabe neil's</button></div>
 
   
  
  <div class="devices" [ngClass]="myClass">
-          <div class="device1" wmAnimate="fadeInRight" speed="normal" aos></div>
-          <div class="device2" wmAnimate="fadeInLeft" speed="normal" aos></div>
+          <div class="device1"  wmAnimate="fadeInRight" speed="normal" aos></div>
+          <div class="device2"  wmAnimate="fadeInLeft" speed="normal" aos></div>
 </div>
 
   <div class="work" *ngIf="nfsbdiv" wmAnimate="fadeInLeft" speed="normal">
