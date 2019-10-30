@@ -5,6 +5,16 @@
 .testimonials{
     @include sections;
 
+    @mixin person($top, $left){
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        border-radius: 50px;
+        margin-top: $top;
+        margin-left: $left;
+        position: absolute;
+        
+    }
 
     .next{
         position: absolute;
@@ -56,21 +66,33 @@
         letter-spacing: 2px;
         line-height: 35px;
 
-        h4{
-            @include textposition(100px, 200px);
-            text-transform: uppercase;
+        .person{
+            
+            @include person(40px, 100px);
+            h4{
+                @include textposition(20px, 120px);
+                text-transform: uppercase;
+                width: 500px;
+            }
         }
+
+      
     }
 
     .testimonialtext2{
-        @include textposition(301px, 996px);
+        @include textposition(250px, 996px);
         @include fontcolor($accent);
         width: 561px;
         letter-spacing: 2px;
 
-        h4{
-            @include textposition(50px, 300px);
-            text-transform: uppercase;
+        .person{
+            
+            @include person(40px, 100px);
+            h4{
+                @include textposition(20px, 120px);
+                text-transform: uppercase;
+                width: 500px;
+            }
         }
     }
     

@@ -61,13 +61,13 @@ import {
      state('close', style({
       
        width:'225px',
-       opacity: 0,
+       opacity: 1,
        transform: 'translateX(0)',
 
      })),
      transition('open => close', [
       
-       animate('1s')
+       animate('0.5s')
      ]),
      transition('close => open', [
        animate('1s')

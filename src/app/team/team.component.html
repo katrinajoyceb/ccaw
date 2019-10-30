@@ -5,18 +5,14 @@
     <div *ngIf="visible"  class="teresa" (click)="show('teresa')"></div>
     <div *ngIf="visible"  class="kat" (click)="show('kat')"></div>
 
-    
+     <div class="back"  wmAnimate="fadeIn" speed="fast" *ngIf="!visible"><button (click) = "hide()">team</button></div>
     <div class="stuff">
     
+       
+
     <div  [@openClose]="isOpen ? 'open' : 'close'"[ngClass]="myClass">
+
            
-       <div class="back" (click)="hide()">
-           
-        <button><h4><</h4></button>
-        <!-- <h1>{{about.first}}</h1><h1 class="last">{{about.last}}</h1> -->
-    
-    
-     </div>
 
      <div class="name">
          <h1>{{about.first}}</h1><h1 class="last">{{about.last}}</h1>

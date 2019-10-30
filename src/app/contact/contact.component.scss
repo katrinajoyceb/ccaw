@@ -31,6 +31,7 @@
         @include fontcolor($accent); 
         white-space:pre-line;  
         margin-top: -10px;
+        opacity: 0.5;
        }
 
        
@@ -78,6 +79,28 @@
                 width: 300px;
                 letter-spacing: 3px;
                 @include fontcolor($accent); 
+                @include font-face("Roboto Slab", "serif", 300, 15px, 20px);
+            }
+
+            input::placeholder{ 
+                @include fontcolor($accent); 
+                opacity: 0.5;
+                letter-spacing: 3px;
+                @include font-face("Roboto Slab", "serif", 300, 15px, 20px);
+            }
+            
+            .contactbutton{
+                position: absolute;
+                    button{
+                        @include font-face("Roboto Slab", "serif", 400, 20px, 10px);
+                        @include fontcolor($accent); 
+                        width: 150px;
+                        height: 50px;
+                        background-color: transparent;
+                        border: none;
+                        letter-spacing: 10px;
+                    }
+              
             }
 
             
