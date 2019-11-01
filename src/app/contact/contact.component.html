@@ -1,28 +1,45 @@
 <div class="contact"><h1 wmAnimate="fadeInLeft" speed="normal" aos>contact</h1>
       <div class="contactinfo" [@translateForm]="isMapOpen ? 'small' : 'large'" >
-        <h4><p>(512) 842-7569</p>
-        <p>info@caprockapps.com</p>
-        <p>5280 34th ST <br />
+        <h4>
+            
+                <div class="phone"></div><p>(512) 842-7569</p>
+                <div class="email"></div> <p>info@caprockapps.com</p>
+                <div class="address"></div><p>5280 34th ST <br />
         Lubbock, TX 79407<br />
         Hours: Monday-Friday 8-5</p>
-        <p>(Click map to expand)</p></h4>
+        <p>(Click map to expand)</p>
+    
+    
+        </h4>
 
        
     </div>
     <div class="map" (click)="openMap()" [@openClose]="isMapOpen ? 'open' : 'close'"></div>
     <div class="accentbox" (click)="closeMap()" [@smallLarge]="isMapOpen ? 'small' : 'large'" wmAnimate="fadeInRight" speed="normal" aos>
         <div class="contactform">
-            <b class="label">EMAIL</b> <input type="text" class="holder" placeholder="youremail@example.com"/>
-            <b class="label">NAME</b> <input type="text" class="holder" placeholder="your name"/>
-           
-             <div class="contactbutton"><button class="stuff">SUBMIT</button></div>
-         </div>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+            
+            <label for="email">EMAIL</label> <input id="email" required formControlName="email" type="text" class="holder" placeholder="youremail@example.com"/><br />
+          
+            <label for="name">NAME</label> <input id="name" required formControlName="name" type="text" class="holder" placeholder="your name"/>
+            <div class="contactmessage" (click)="closeMap()" [@contactForm]="isMapOpen ? 'small' : 'large'"><textarea id="message" required formControlName="message"  placeholder="I have a project that I would like to talk to y'all about."></textarea>
+            
+            
+            <button class="stuff" type="submit" [disabled]="!contactForm.valid">SUBMIT</button>
+
+            </div>
+            
+            </form>
+          
+               
+            </div>
+        </div>
     </div>
 
-    <div class="contactmessage" (click)="closeMap()" [@contactForm]="isMapOpen ? 'small' : 'large'"><textarea placeholder="I have a project that I would like to talk to y'all about."></textarea></div>
+   
 
   
   
 
 
-</div>
+

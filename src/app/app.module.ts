@@ -15,6 +15,8 @@ import { TeamComponent } from './team/team.component';
 import { FullmenuComponent } from './fullmenu/fullmenu.component';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { AnimateComponent } from './animate/animate.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,15 @@ import { AnimateComponent } from './animate/animate.component';
     MenuComponent,
     TeamComponent,
     FullmenuComponent,
-    AnimateComponent
+    AnimateComponent,
+    MapComponent
    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ScrollDispatchModule
+    ScrollDispatchModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

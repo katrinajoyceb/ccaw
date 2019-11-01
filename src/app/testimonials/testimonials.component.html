@@ -1,6 +1,7 @@
 <div class="testimonials"><h1>testimonials</h1>
 
-        <div class="next"><button (click)="next()">more</button></div>
+        <div class="next" *ngIf="firstPage" ><button (click)="next()">next</button></div>
+        <div class="next" *ngIf="secondPage"><button (click)="next()">back</button></div>
   
     <div class="accentbox" wmAnimate="fadeInUp" speed="normal" aos>
 

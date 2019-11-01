@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import {
   trigger,
   state,
@@ -95,8 +97,21 @@ import {
 export class ContactComponent implements OnInit {
 
   isMapOpen: boolean = false;
+  contactForm = new FormGroup ({
+    email: new FormControl(''),
+    name: new FormControl(''),
+    message: new FormControl(''),
+  });
 
-  constructor() { }
+
+
+  constructor() { 
+    // this.contactForm = this.formBuilder.group({
+    //   email: '',
+    //   name: '',
+    //   message: ''
+    // });
+  }
 
   ngOnInit() {
   }
@@ -110,4 +125,9 @@ export class ContactComponent implements OnInit {
     this.isMapOpen = false;
   }
 
+
+  onSubmit(){
+    console.warn('You message has been sent', this.contactForm.value);
+    this.contactForm.reset();
+  }
 }
