@@ -47,13 +47,14 @@
   
 
     .phone{
-        @include textposition(83px,952px);
-        background-image:  url('src/images/heropage/welcomephone.png');
+        @include textposition(20px,912px);
+        background-image:  url('src/images/heropage/iphone.png');
         background-size: 510px;
         background-repeat: no-repeat;
-        background-position: -40px -35px;
+        background-position: 0px 0px;
         width: 510px;
-        height: 984px;
+        height: 1017px;
+      
         position: absolute;
         z-index: 10;
         
