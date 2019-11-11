@@ -233,6 +233,7 @@
     .accentbox{
         @include box(746px, 640px, 128px, 0px);
         position: absolute;
+        
     }
     .portfoliotext{
         @include textposition(264px, 905px);

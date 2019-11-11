@@ -39,7 +39,8 @@ $maincontainerbackground: #FFF;
 }
 
 @mixin box($width, $height, $top, $left){
-    background-color: $primary;
+    background: rgb(191,59,0);
+    background: linear-gradient(45deg, rgba(191,59,0,1) 0%, rgba(255,128,0,1) 100%);
     width: $width;
     height: $height;
     margin-top: $top;
