@@ -1,5 +1,9 @@
-<div class="back2" *ngIf="!condition"><button  (click) = "goBack()">about</button></div>
+<div class="menudiv">
+
+  <div class="back2" *ngIf="!condition"><button  (click) = "goBack()">about</button></div>
 <div class="back1" *ngIf="condition"><button (click) = "goTeam()">go team!</button></div>
+</div>
+
 
 <div *ngIf="condition" class="about"  wmAnimate="fadeInRight" speed="normal">
     <div class="aboutbox"><h1 wmAnimate="fadeInRight" speed="normal" aos>about caprock</h1>

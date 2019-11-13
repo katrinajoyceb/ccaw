@@ -8,13 +8,124 @@
 }
 
 .container {
-   @include bgsizecolor($accent, 100%, 100%);
+   @include bgsizecolor($accent, 1920px, 100%);
    margin-bottom: 300px;
+
+
+.fullmenu{
+    width: 1920px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 10000000000000;
+    text-align: center;
+    padding-top: 100px;
+
+    a{
+        @include font-face("Roboto Slab", "serif", 400, 50px, 100px);
+        text-decoration: none;
+        letter-spacing: 20px;
+        color: black;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        -webkit-transition-duration: 1s;
+        transition-duration: 1s;
+        cursor: pointer;
+    }
+
+    a:hover{
+        color: $primary;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        -webkit-transition-duration: 1s;
+        transition-duration: 1s;
+    }
+
+    .close{
+        cursor: pointer;
+    }
+
+}
+   
+.menu{
+    
+    width: 1920px;
+    height: 150px;
+    position: fixed;
+    z-index: 10000000;
+    margin: 0 auto; 
+    mix-blend-mode:  difference;
+  
+    // background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.212) 37%, rgba(0, 0, 0, 0.479) 66%, #ffffff96);
+   
+
+    .back1{
+        position: absolute;
+        z-index: 10000000;  
+        @include textposition(50px,1553px);
+
+        button{
+            background-color: transparent;
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    
+    }
+    
+   
+
+    .stuff{
+        width: 1920px;
+       
+        margin: 0 auto;
+        
+        
+        .logo{
+            @include textposition(44px,317px);
+            width: 90px;
+            height: 90px;
+            background-image:  url('src/images/heropage/c.png');
+            position: absolute;
+          
+            
+    
+           
+    
+        }
+    
+        .menu{
+            @include textposition(61px,1553px);
+            width: 50px;
+            height: 30px;
+            background-image:  url('src/images/heropage/ic_menu_24px.png');
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+
+
+    
+
+    .talkio{
+        @include textposition(693px,1553px);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.171);
+        position: absolute;
+    }
+}
+
+
 }
 
 
 .section{
     margin-top: 200px;
+    padding-top: 80px;
+   
 }
 
 .box{

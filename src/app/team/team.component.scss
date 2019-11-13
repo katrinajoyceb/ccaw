@@ -21,6 +21,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
+            cursor: pointer;
           
         }
     }
@@ -43,6 +44,7 @@
         background-image:url('src/images/about/nat-min.png');
         background-size: 450px;
         background-position: -20px 0px;
+        cursor: pointer;
 
     }
 
@@ -55,6 +57,7 @@
         background-size: 450px;
         background-position: -20px 0px;
         position: absolute;
+        cursor: pointer;
     }
 
     .riley{
@@ -66,6 +69,7 @@
         background-size: 450px;
         background-position: -20px 0px;
         position: absolute;
+        cursor: pointer;
     }
 
     .teresa{
@@ -77,6 +81,7 @@
         background-size: 450px;
         background-position: -10px 0px;
         position: absolute;
+        cursor: pointer;
     }
 
     .kat{
@@ -88,6 +93,7 @@
         background-size: 450px;
         background-position: -25px 0px;
         position: absolute;
+        cursor: pointer;
     }
     .name{
         letter-spacing: 25px;

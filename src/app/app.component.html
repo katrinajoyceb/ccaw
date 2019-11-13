@@ -1,38 +1,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
 <div class="container">
 
-    <app-menu></app-menu>
-    <div class="hero">
+        <div *ngIf="!condition" class="fullmenu" wmAnimate="fadeInDown" speed="fast">
+            <div class="close" (click) = "condition = !condition">X close</div>
+                <a  (click) = "condition = !condition" href="#about">about</a><br />
+                <a (click) = "condition = !condition" href="#wireframes">wireframes</a><br />  
+                <a (click) = "condition = !condition" href="#portfolio">portfolio</a><br />
+                <a (click) = "condition = !condition" href="#testimonials">testimonials</a><br />
+                <a (click) = "condition = !condition" href="#packages">packages</a><br />
+                <a  (click) = "condition = !condition"href="#contact">contact</a>
+            </div>
+        
+        <div class="menu" *ngIf="!scrolling" wmAnimate="fadeIn" speed="fast">
+        
+               <div class="back1" *ngIf="!condition"><button (click) = "condition = !condition">X</button></div>   
+        
+        <div class="stuff" *ngIf="condition">
+            <div class="logo" wmAnimate="fadeIn" speed="fast"></div>
+            
+            <div class="menu" (click) = "condition = !condition"></div>
+
+
+           
+        </div>
+          
+    
+        
+        </div>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="hero" id="hero"  wmAnimate="landing" speed="normal" aos>
         <app-hero ></app-hero>
     </div>
 
 
-    <div class="section" wmAnimate="fadeInUp" speed="normal" aos>
+    <div class="section" id="about" wmAnimate="fadeInUp" speed="normal" aos>
         <app-about></app-about>
     </div>
 
 
-    <div class="section" wmAnimate="fadeInUp" speed="normal" aos>
+    <div class="section" id="wireframes" wmAnimate="fadeInUp" speed="normal" aos>
         <app-wireframes></app-wireframes>
     </div>
 
 
-    <div class="section" wmAnimate="fadeInUp" speed="normal" aos>
+    <div class="section" id="portfolio" wmAnimate="fadeInUp" speed="normal" aos>
         <app-portfolio></app-portfolio>
     </div>
 
-    <div class="section" wmAnimate="fadeInUp" speed="normal" aos>
+    <div class="section" id="testimonials" wmAnimate="fadeInUp" speed="normal" aos>
         <app-testimonials></app-testimonials>
     </div>
 
-    <div class="section" wmAnimate="fadeInUp" speed="normal" aos>
+    <div class="section" id="packages" wmAnimate="fadeInUp" speed="normal" aos>
         <app-packages></app-packages>
     </div>
     
-    <div class="section" wmAnimate="fadeInUp" speed="normal" aos>
+    <div class="section" id="contact" wmAnimate="fadeInUp" speed="normal" aos>
         <app-contact></app-contact>
     </div>
 
